@@ -43,7 +43,7 @@ func generate_circle_points(radius, n = 24):
 	for i in range(n):
 		circle.append(v.rotated((2*PI*i)/n))
 	
-	return PoolVector2Array(circle)
+	return PackedVector2Array(circle)
 
 # returns a Vector2 with random direction
 func random_vector(length = 1, min_angle = 0, max_angle = 2*PI):

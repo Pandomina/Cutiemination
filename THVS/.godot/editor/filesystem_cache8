@@ -1,0 +1,25 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1693994474
+default_env.tres::Environment::-1::1693994466::0::1::::<><>::
+floor.png::CompressedTexture2D::8157076460446117762::1693994442::1693994476::1::::<><>::
+icon.png::CompressedTexture2D::5742857639437906739::1693994442::1693994476::1::::<><>::
+Player.gd::GDScript::-1::1693994466::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::-1::1693994466::0::1::::<><>::res://icon.png<>res://Player.gd
+StaticBody2D.tscn::PackedScene::-1::1693994466::0::1::::<><>::
+Toolbox.gd::GDScript::-1::1693994466::0::1::::<>Node<>::
+UpperBoundary.tscn::PackedScene::-1::1693994466::0::1::::<><>::
+World.gd::GDScript::-1::1693994466::0::1::::<>Node<>::
+World.tscn::PackedScene::-1::1693994466::0::1::::<><>::res://WorldGeneration/BitmapGenerator.tscn<>res://World.gd<>res://WorldGeneration/BitmapToMeshConverter.tscn<>res://Player.tscn<>res://floor.png<>res://light motes/Light_mote.tscn
+::res://light motes/::1693994442
+circular_gradient.png::CompressedTexture2D::3485330636744273863::1693994442::1693994476::1::::<><>::
+Heart Beat.ogg::AudioStreamOggVorbis::1646150182806627233::1693994442::1693994475::1::::<><>::
+Light_mote.tscn::PackedScene::-1::1693994466::0::1::::<><>::res://light motes/mote.gd<>res://light motes/mote_4.png<>res://light motes/circular_gradient.png
+mote.gd::GDScript::-1::1693994466::0::1::::<>Area2D<>::
+mote_4.png::CompressedTexture2D::5951440208661078485::1693994442::1693994476::1::::<><>::
+mote_8.png::CompressedTexture2D::7965964788592868999::1693994442::1693994476::1::::<><>::
+mote_16.png::CompressedTexture2D::7148536169553231925::1693994442::1693994476::1::::<><>::
+::res://WorldGeneration/::1693994442
+BitmapGenerator.gd::GDScript::-1::1693994466::0::1::::<>Node<>::
+BitmapGenerator.tscn::PackedScene::-1::1693994466::0::1::::<><>::res://WorldGeneration/BitmapGenerator.gd
+BitmapToMeshConverter.gd::GDScript::-1::1693994466::0::1::::MeshGenerator<>Node<>::
+BitmapToMeshConverter.tscn::PackedScene::-1::1693994466::0::1::::<><>::res://WorldGeneration/BitmapToMeshConverter.gd

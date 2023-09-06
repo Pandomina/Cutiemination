@@ -72,7 +72,8 @@ class ControlVertex:
 	var right
 	var region_index
 	
-	func _init(_position, _active, _region_index).(_position):
+	func _init(_position, _active, _region_index):
+		super(_position)
 		active = _active
 		region_index = _region_index
 		above = Vertex.new(position + Vector2.UP  / 2.0 ) 
@@ -206,7 +207,7 @@ func tri_to_poly(list_of_triangles, debug):
 			current_triangle = list_of_triangles.size()-1
 			
 			
-	return PoolVector2Array(new_polygon)
+	return PackedVector2Array(new_polygon)
 
 
 func add_triangle(new_polygon, triangle, debug):

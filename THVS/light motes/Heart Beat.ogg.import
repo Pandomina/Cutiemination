@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Heart Beat.ogg-45e5579b36e6364d4aaa22f1b04afc23.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xpn4acrwjnqf"
+path="res://.godot/imported/Heart Beat.ogg-45e5579b36e6364d4aaa22f1b04afc23.oggvorbisstr"
 
 [deps]
 
 source_file="res://light motes/Heart Beat.ogg"
-dest_files=[ "res://.import/Heart Beat.ogg-45e5579b36e6364d4aaa22f1b04afc23.oggstr" ]
+dest_files=["res://.godot/imported/Heart Beat.ogg-45e5579b36e6364d4aaa22f1b04afc23.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

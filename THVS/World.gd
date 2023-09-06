@@ -1,16 +1,16 @@
 extends Node
 
 
-export var scale_factor = 50.0
-export var region_color = Color(1,0,0,0.8)
+@export var scale_factor = 50.0
+@export var region_color = Color(1,0,0,0.8)
 
 #World Regions Bitmap settings
-export var size = 100
-export var random_fill_percent = 0.47
-export var seed_value = 55555
-export var clearing_radius = 10
-export var smoothing_steps = 10
-export var wall_threshold_size = 10
+@export var size = 100
+@export var random_fill_percent = 0.47
+@export var seed_value = 55555
+@export var clearing_radius = 10
+@export var smoothing_steps = 10
+@export var wall_threshold_size = 10
 
 var region_map
 var region_count

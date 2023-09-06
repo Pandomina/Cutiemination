@@ -1,23 +1,23 @@
 extends Area2D
 
-export (bool) var debug = true
-export (float) var reaction_time = 1
-export (float) var friction = 0.5
+@export (bool) var debug = true
+@export (float) var reaction_time = 1
+@export (float) var friction = 0.5
 
-export (float) var repel_range = 500
-export (float) var repel_response = 1
-export (float) var repel_force = 100
+@export (float) var repel_range = 500
+@export (float) var repel_response = 1
+@export (float) var repel_force = 100
 
-export (float) var attract_range = 500
-export (float) var attract_response = 1
-export (float) var attract_force = 100
+@export (float) var attract_range = 500
+@export (float) var attract_response = 1
+@export (float) var attract_force = 100
 
-export (float) var random_force = 25
-export (float) var random_min_interval = 4
-export (float) var random_max_interval = 8
-export (float) var random_multiplier_strength = 1
+@export (float) var random_force = 25
+@export (float) var random_min_interval = 4
+@export (float) var random_max_interval = 8
+@export (float) var random_multiplier_strength = 1
 
-export (bool) var random_movement = true
+@export (bool) var random_movement = true
 
 var move_direction = Vector2.ZERO
 
@@ -54,18 +54,18 @@ func _physics_process(delta):
 	position += move_direction * delta
 	
 	if debug:
-		$Attract.points = PoolVector2Array([Vector2(), attract])
-		$Repel.points = PoolVector2Array([Vector2.ZERO, repel])
-		$Random.points = PoolVector2Array([Vector2.ZERO, random])
-		$Target.points = PoolVector2Array([Vector2.ZERO, move_target])
-		$Movement.points = PoolVector2Array([Vector2.ZERO, move_direction])
+		$Attract.points = PackedVector2Array([Vector2(), attract])
+		$Repel.points = PackedVector2Array([Vector2.ZERO, repel])
+		$Random.points = PackedVector2Array([Vector2.ZERO, random])
+		$Target.points = PackedVector2Array([Vector2.ZERO, move_target])
+		$Movement.points = PackedVector2Array([Vector2.ZERO, move_direction])
 
 func _attract():
 	# I'm assuming the only body in the motes' collision mask is the player
 	var bodies = get_overlapping_bodies()
 	var attract_direction = Vector2.ZERO
 	
-	if not bodies.empty():
+	if not bodies.is_empty():
 		var player = bodies[0]
 		var direction = position.direction_to(player.position)
 		var distance = position.distance_to(player.position)

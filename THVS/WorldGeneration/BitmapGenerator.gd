@@ -92,17 +92,17 @@ func bitmap_to_rgb_texture(bitmap):
 	var image = Image.new()
 	image.create(size,size,false,4)
 	
-	image.lock()
+	false # image.lock() # TODOConverter3To4, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	for x in size:
 		for y in size:
 			if bitmap[x][y][BITMAP_DATA.TILE_TYPE] == 1:
 				image.set_pixel(x, y, Color( 0, 0, 0))
 			else:
 				image.set_pixel(x, y, Color( 1, 1, 1))
-	image.unlock()
+	false # image.unlock() # TODOConverter3To4, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	
 	var texture = ImageTexture.new()
-	texture.create_from_image(image,1)
+	texture.create_from_image(image) #,1
 	return texture
 
 
@@ -115,17 +115,17 @@ func bitmap_to_rgba_texture(bitmap):
 	var image = Image.new()
 	image.create(size,size,false,5)
 	
-	image.lock()
+	false # image.lock() # TODOConverter3To4, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	for x in size:
 		for y in size:
 			if bitmap[x][y][BITMAP_DATA.TILE_TYPE] == 1:
 				image.set_pixel(x, y, Color( 0, 0, 0,1))
 			else:
 				image.set_pixel(x, y, Color( 1, 1, 1,1))
-	image.unlock()
+	false # image.unlock() # TODOConverter3To4, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	
 	var texture = ImageTexture.new()
-	texture.create_from_image(image,1)
+	texture.create_from_image(image) #,1
 	return texture
 
 
@@ -346,7 +346,7 @@ func _get_region_tiles(bitmap, start_x, start_y):
 	var queue = []
 	queue.append(Vector2(start_x,start_y))
 	map_flags[start_x][start_y]= 1
-	while(!queue.empty()):
+	while(!queue.is_empty()):
 		var tile = queue.pop_back()
 		tiles.append(tile)
 
